@@ -1,0 +1,337 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #172033;
+  color: white;
+  padding: 22px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brandIcon {
+  background: #2d6cdf;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  opacity: .8;
+}
+
+.prototypeBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 20px;
+  padding: 8px 13px;
+  font-size: 13px;
+}
+
+.container {
+  width: 94%;
+  max-width: 1500px;
+  margin: 28px auto;
+}
+
+.introCard {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0,0,0,.06);
+}
+
+.introCard h2 {
+  margin: 0 0 8px;
+}
+
+.introCard p {
+  max-width: 850px;
+  line-height: 1.6;
+  margin: 0;
+  color: #5d6879;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(350px, .8fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.06);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card h3 {
+  border-bottom: 1px solid #e4e8ef;
+  padding-bottom: 9px;
+  margin-top: 27px;
+}
+
+.resetButton {
+  border: 1px solid #d5dce7;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid #ccd4df;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fbfcfe;
+}
+
+.field input:focus {
+  outline: 2px solid #9bbcf4;
+  border-color: #2d6cdf;
+}
+
+.field small {
+  color: #7a8493;
+  font-size: 11px;
+}
+
+.assessmentButton {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #2d6cdf;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.assessmentButton:hover {
+  opacity: .9;
+}
+
+.assessmentButton:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.waitingCard {
+  text-align: center;
+  color: #677386;
+  padding: 55px 25px;
+}
+
+.waitingCard svg {
+  margin-bottom: 15px;
+}
+
+.resultCard {
+  text-align: center;
+}
+
+.riskNumber {
+  font-size: 58px;
+  font-weight: 800;
+  margin: 20px 0 10px;
+}
+
+.classification {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 9px 17px;
+  background: #eef4ff;
+  color: #2457a6;
+  font-weight: 700;
+}
+
+.threshold {
+  margin-top: 15px;
+  color: #697587;
+  font-size: 13px;
+}
+
+.modelInfo {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e9ef;
+  font-size: 13px;
+}
+
+.explanationIntro {
+  color: #677386;
+  line-height: 1.5;
+}
+
+.explanationItem {
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.featureName {
+  font-weight: 600;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.contribution {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.positive {
+  color: #b04444;
+}
+
+.negative {
+  color: #28734a;
+}
+
+.direction {
+  color: #687487;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.xaiFooter {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e9ef;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.safetyCard {
+  display: flex;
+  gap: 14px;
+  background: #fff9e8;
+  border: 1px solid #f0df9a;
+}
+
+.safetyCard h3 {
+  border: none;
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.safetyCard p {
+  margin: 0;
+  line-height: 1.5;
+  color: #635b42;
+}
+
+.errorBox {
+  margin-top: 18px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #9b3030;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #7a8493;
+  font-size: 13px;
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .introCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
